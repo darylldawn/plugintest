@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Cordova Plugin Test",
     "cordova": {
-      "id": "cordova-android-toast",
+      "id": "cordova-android-test",
       "platforms": [
         "android"
       ]
