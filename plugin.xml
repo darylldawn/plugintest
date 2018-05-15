@@ -27,13 +27,13 @@
             <runs />
         </js-module>
     </platform>
-    <!-- <platform name="ios">
+    <platform name="ios">
         <config-file target="config.xml" parent="/*">
-            <feature name="Device">
-                <param name="ios-package" value="CDVDevice"/>
+            <feature name="PluginTest">
+                <param name="ios-package" value="PluginTest"/>
             </feature>
         </config-file>
-        <header-file src="src/ios/CDVDevice.h" />
-        <source-file src="src/ios/CDVDevice.m" />
-    </platform> -->
+        <header-file src="src/ios/PluginTest.h" />
+        <source-file src="src/ios/PluginTest.m" />
+    </platform>
 </plugin>
