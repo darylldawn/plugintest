@@ -1,0 +1,32 @@
+{
+    "name": "cordova-plugin-test",
+    "version": "1.0.0",
+    "description": "Cordova Plugin Test",
+    "cordova": {
+      "id": "cordova-android-toast",
+      "platforms": [
+        "android"
+      ]
+    },
+    "keywords": [
+      "android",
+      "ecosystem:cordova",
+      "cordova-android"
+    ],
+    "engines": [
+      {
+        "name": "cordova",
+        "version": ">=3.0.0"
+      }
+    ],
+    "author": "None",
+    "license": "Apache 2.0",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/darylldawn/plugintest"
+    },
+    "bugs": {
+      "url": "https://github.com/darylldawn/plugintest/issues"
+    },
+    "homepage": "https://github.com/darylldawn/plugintest#readme"
+  }
