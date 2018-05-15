@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-test" version="0.2.3">
+    <name>PluginTest</name>
+    <description>Cordova Plugin Test</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova</keywords>
+    <js-module src="www/plugin.js" name="plugin">
+        <clobbers target="PluginTest" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="PluginTest">
+        <param name="android-package" value="com.test.PluginTest">
+        <param name="onload" value="true">
+
+        <source-file src="src/android/com/test/PluginTest.java" target="src/com/example">
+    </platform>
+    <!-- <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Device">
+                <param name="ios-package" value="CDVDevice"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVDevice.h" />
+        <source-file src="src/ios/CDVDevice.m" />
+    </platform> -->
+</plugin>
