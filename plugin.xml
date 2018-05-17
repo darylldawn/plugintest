@@ -9,9 +9,10 @@
         <clobbers target="PluginTest" />
     </js-module>
     <platform name="android">
-        <config-file target="config.xml" parent="/*">
+        <config-file target="res/xml/config.xml" parent="/*">
             <feature name="PluginTest">
                 <param name="android-package" value="com.test.PluginTest" />
+                <param name="onload" value="true" />
             </feature>
         </config-file>
         <source-file src="src/android/PluginTest.java" target-dir="src/com/test/plugintest" />

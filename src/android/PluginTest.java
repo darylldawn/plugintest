@@ -1,30 +1,32 @@
-package com.test.PluginTest;
+package org.apache.cordova.plugin;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
+
 import org.json.JSONArray;
-import org.json.JSONObject;
 import org.json.JSONException;
-import android.content.Context;
+import org.json.JSONObject;
 
-
+/**
+* This class echoes a string called from JavaScript.
+*/
 public class PluginTest extends CordovaPlugin {
-    @Override
-    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if ("echo".equals(action)) {
-            show(args.getString(0), callbackContext);
-            return true;
-        }
 
-        return false;
+@Override
+public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+    if (action.equals("echo")) {
+        String message = args.getString(0);
+        this.echo(message, callbackContext);
+        return true;
     }
+    return false;
+}
 
-    private void show(String msg, CallbackContext callbackContext) {
-        if (msg == null || msg.length() == 0) {
-            callbackContext.error("Empty message!");
-        } else {
-            Log.d(TAG, msg);
-            callbackContext.success(msg);
-        }
+private void echo(String message, CallbackContext callbackContext) {
+    if (message != null && message.length() > 0) {
+        callbackContext.success(message);
+    } else {
+        callbackContext.error("Expected one non-empty string argument.");
     }
+}
 }
